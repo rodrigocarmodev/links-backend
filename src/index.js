@@ -5,6 +5,10 @@ const authController = require('./controllers/auth');
 
 const app = express();
 
+// Middleware para usar o req.body por exemplo
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/auth', authController);
 
 app.get('/', (req, res) => {
