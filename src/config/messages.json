@@ -10,5 +10,12 @@
   "account.signup.email.string.email": "E-mail não é válido.",
   "account.signup.password_confirmation.any.required": "Confirmação de senha é obrigatório.",
   "account.signup.password.string.empty": "Senha é obrigatório",
-  "account.signup.password.pattern.base": "Senha deve conter entre 3 e 30 caracteres e deve conter letras ou números. Caracteres especiais não são permitidos."
+  "account.signup.password.pattern.base": "Senha deve conter entre 3 e 30 caracteres e deve conter letras ou números. Caracteres especiais não são permitidos.",
+  "account.signin.invalid": "Credenciais inválidas.",
+  "account.signin.success": "Login efetuado com sucesso.",
+  "account.signin.email.string.empty": "E-mail é obrigatório.",
+  "account.signin.email.string.email": "E-mail não é válido.",
+  "account.signin.password_confirmation.any.required": "Confirmação de senha é obrigatório.",
+  "account.signin.password.string.empty": "Senha é obrigatório",
+  "account.signin.password.pattern.base": "Senha deve conter entre 3 e 30 caracteres e deve conter letras ou números. Caracteres especiais não são permitidos."
 }
