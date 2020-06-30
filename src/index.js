@@ -1,5 +1,6 @@
 const express = require('express');
 const response = require('./middlewares/response');
+const checkJwt = require('./middlewares/jwt');
 const db = require('./models');
 
 const authController = require('./controllers/auth');
@@ -7,8 +8,9 @@ const linkController = require('./controllers/link');
 
 const app = express();
 
-// Middlewares 
+// Middlewares
 app.use(response);
+app.use(checkJwt);
 
 // Middleware para usar o req.body por exemplo
 app.use(express.json());

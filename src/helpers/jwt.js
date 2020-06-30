@@ -15,17 +15,17 @@ const generateRefreshJwt = (payload) => {
   return jwt.sign(payload, refreshTokenPrivateKey, refreshOptions);
 };
 
-const verityJwt = (token) => {
+const verifyJwt = (token) => {
   return jwt.verify(token, tokenPrivateKey);
 };
 
-const verityRefreshJwt = (token) => {
+const verifyRefreshJwt = (token) => {
   return jwt.verify(token, refreshTokenPrivateKey);
 };
 
 module.exports = {
   generateJwt,
   generateRefreshJwt,
-  verityJwt,
-  verityRefreshJwt,
+  verifyJwt,
+  verifyRefreshJwt,
 };
