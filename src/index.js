@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const response = require('./middlewares/response');
 const checkJwt = require('./middlewares/jwt');
 const db = require('./models');
@@ -16,8 +17,11 @@ app.use(checkJwt);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Controllers
 app.use('/auth', authController);
 app.use('/link', linkController);
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   return res.json('Api running ...');
