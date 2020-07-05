@@ -8,6 +8,7 @@ const authController = require('./controllers/auth');
 const linkController = require('./controllers/link');
 
 const app = express();
+app.use(cors());
 
 // Middlewares
 app.use(response);
@@ -20,8 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 // Controllers
 app.use('/auth', authController);
 app.use('/link', linkController);
-
-app.use(cors());
 
 app.get('/', (req, res) => {
   return res.json('Api running ...');
